@@ -47,16 +47,12 @@ $(function () {
     });
 
     var clientWidth = document.documentElement.clientWidth;
-    var maxWidthMobileView2 = 767;
+    var widthTablet = 767;
     var isShowLoginPanel = true;
     var isShowRegisterPanel = false;
-    $(window).on("resize", function () {
-        clientWidth = document.documentElement.clientWidth;
-        toggleVisibleLoginAndRegistrationPanel();
-    });
 
     $('.btn_login').on('click', function (e) {
-        if (clientWidth > maxWidthMobileView2) {
+        if (clientWidth > widthTablet) {
             //типо десктоп
             //выполняем валидацию формы и отправку (пока временно ничего не делаем)
 //            e.preventDefault();
@@ -76,7 +72,7 @@ $(function () {
         }
     });
     $('.btn_reg').on('click', function (e) {
-        if (clientWidth > maxWidthMobileView2) {
+        if (clientWidth > widthTablet) {
             //типо десктоп
             //выполняем валидацию формы и отправку (пока временно ничего не делаем)
 //            e.preventDefault();
@@ -96,7 +92,7 @@ $(function () {
         }
     });
     function toggleVisibleLoginAndRegistrationPanel() {
-        if (clientWidth <= maxWidthMobileView2) {
+        if (clientWidth <= widthTablet) {
             if (isShowLoginPanel) {
                 $('.js-registration-accordion').hide();
                 $('.btn_login').addClass('active');
@@ -113,40 +109,56 @@ $(function () {
 
     toggleVisibleLoginAndRegistrationPanel();
 
-    function setHeight() {
-        var clientHeight = document.documentElement.clientHeight;
-        var headerHeight =  $('.header').height();
-        var titleHeight =  $('.mob_title').outerHeight();
-        var contentHeight = clientHeight - headerHeight - titleHeight - 50 - 82 ;
+    var clientHeight = document.documentElement.clientHeight;
+    var headerHeight =  $('.header').height();
+    var mobTitleHeight =  $('.mob_title').outerHeight();
+    var message =  $('.message_wrap').outerHeight();
+    var titleNoteHeight =  $('.header_title_note').outerHeight();
+    var titleHeight =  $('.prof_title').outerHeight();
+    var headerTitleHeight =  $('.header_title').outerHeight();
+
+    function setHeightMob() {
+//        var clientHeight = document.documentElement.clientHeight;
+//        var headerHeight =  $('.header').height();
+//        var mobTitleHeight =  $('.mob_title').outerHeight();
+//        var message =  $('.message_wrap').outerHeight();
+        var contentHeight = clientHeight - headerHeight - message - mobTitleHeight - 50 - 82 ;
         $('.login_inner').css("min-height", contentHeight);
     }
 
-    setHeight();
+    setHeightMob();
 
-    function setHeightPage() {
-        var clientHeight = document.documentElement.clientHeight;
-        var headerHeight =  $('.header').height();
-        var titleHeight =  $('.header_title').outerHeight();
-        var titleNoteHeight =  $('.header_title_note').outerHeight();
-        var titleProfHeight =  $('.prof_title').outerHeight();
-        var contentHeight = clientHeight - headerHeight - titleHeight - titleProfHeight - titleNoteHeight - 61 ;
-//        $('.page_inner').css("min-height", contentHeight);
+    function setHeightContent() {
+//        var clientHeight = document.documentElement.clientHeight;
+//        var headerHeight =  $('.header').height();
+//        var headerTitleHeight =  $('.header_title').outerHeight();
+//        var titleNoteHeight =  $('.header_title_note').outerHeight();
+//        var titleProfHeight =  $('.prof_title').outerHeight();
+        var contentHeight = clientHeight - headerHeight - headerTitleHeight - titleHeight - titleNoteHeight - 60 ;
         $('.page_wrap').css("min-height", contentHeight);
         $('.profile_wrap').css("min-height", contentHeight);
         $('.page_wrap_height').css("min-height", contentHeight);
-//        $('.admin_table').css("min-height", contentHeight);
     }
 
-    setHeightPage();
+    setHeightContent();
 
     $(window).on("resize", function () {
-        setHeightPage();
-        setHeight();
+        clientWidth = document.documentElement.clientWidth;
+        clientHeight = document.documentElement.clientHeight;
+        headerHeight =  $('.header').height();
+        mobTitleHeight =  $('.mob_title').outerHeight();
+        message =  $('.message_wrap').outerHeight();
+        titleNoteHeight =  $('.header_title_note').outerHeight();
+        titleHeight =  $('.prof_title').outerHeight();
+        headerTitleHeight =  $('.header_title').outerHeight();
+
+        toggleVisibleLoginAndRegistrationPanel();
+        setHeightContent();
+        setHeightMob();
         setPanelHeight();
-//        setHeightInner();
     });
 
-    var widthTablet = 767;
+
     function setPanelHeight() {
         var el = $('.login_wrap_item');
         if (el.length) {
@@ -160,6 +172,13 @@ $(function () {
                     }
                 });
                 el.height(maxHeight);
+//                var clientHeight = document.documentElement.clientHeight;
+//                var headerHeight =  $('.header').height();
+//                var message =  $('.message_wrap').outerHeight();
+//                var titleHeight =  $('.prof_title').outerHeight();
+//                var titleNoteHeight =  $('.header_title_note').outerHeight();
+                var contentHeight = clientHeight - headerHeight - titleHeight - titleNoteHeight - message - 75 ;
+                $('.login_wrap_item').css("min-height", contentHeight);
             }
         }
     }

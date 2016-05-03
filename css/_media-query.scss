@@ -305,6 +305,7 @@
     .mob_title{
         display: none;
     }
+
     .login_wrap_item{
         width: 52%;
         float: left;
@@ -312,9 +313,10 @@
             width: 48%;
         }
     }
-    .login_inner{
-        min-height: 200px!important;
-    }
+
+//    .login_inner{
+//        min-height: 200px!important;
+//    }
     .btn_wrap{
         margin: 27px 0 0 0;
     }
@@ -350,6 +352,14 @@
     }
     .login_cell{
         padding: 0;
+
+        .btn_wrap{
+
+            .btn_2,
+            .btn_1{
+                line-height: 35px;
+            }
+        }
     }
     .js-login-accordion{
 
@@ -383,7 +393,7 @@
     .login_wrap{
         padding: 25px 0;
         margin: 0 auto 0;
-        max-width: 943px;
+        max-width: 942px;
         background: transparent;
         border: 0;
 
@@ -416,7 +426,7 @@
     }
     .logo{
         display: block;
-        width: 148px;
+        width: 150px;
         margin: 12px 0 0 34px;
 
         img{
@@ -433,7 +443,7 @@
 
             .date_table_cell{
                 color: #7b8da0;
-                font-size: 12px;
+                font-size: 13px;
 
                 font-family: 'Roboto', sans-serif;
                 font-weight: bold;
@@ -450,7 +460,7 @@
         }
         .date_table_cell:nth-child(5){
             text-align: left;
-            width: 60px;
+            width: 76px;
         }
     }
     .date_table_cell{
@@ -506,7 +516,7 @@
     }
     .datepicker_item input {
         font-size: 14px;
-        height: 40px;
+        height: 36px;
     }
     .datepicker_ico_wrap {
         width: 80px;
@@ -514,11 +524,11 @@
         padding-left: 36px;
     }
     .data_separator {
-        margin: 15px 3px 0 3px;
+        margin: 9px 3px 0 3px;
     }
     .datepicker_ico_wrap img {
         width: 18px;
-        top: 12px;
+        top: 9px;
     }
     .datepicker_wrap{
         position: static;
