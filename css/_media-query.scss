@@ -1,0 +1,842 @@
+@media screen and (min-width: 380px){
+    .datepicker_note{
+        @include inblock;
+        font-size: 10px;
+        margin: 8px 0 0 0;
+    }
+    .date_table_wrap{
+        padding: 53px 12px 12px 12px;
+    }
+    .datepicker{
+        float: right;
+        text-align: right;
+    }
+}
+@media screen and (min-width: 400px){
+    .message_wrap{
+        line-height: 50px;
+        font-size: 20px;
+    }
+    .header_links_wrap {
+        font-size: 15px;
+        top: 208px;
+    }
+    .date_table_wrap{
+        border: 25px solid #ebf0f4;
+    }
+    .date_table_cell {
+        font-size: 14px;
+        padding: 15px 0;
+    }
+    .datepicker_note {
+        font-size: 14px;
+    }
+    .balance_title {
+        font-size: 12px;
+    }
+    .header_title {
+        font-size: 36px;
+    }
+    .header_title_note {
+        font-size: 14px;
+    }
+    .mob_title{
+        font-size: 36px;
+    }
+    .message_popup{
+        font-size: 14px;
+        line-height: 43px;
+    }
+}
+@media screen and (min-width: 500px){
+    .message_wrap{
+        font-size: 24px;
+        line-height: 75px;
+    }
+    .message_popup{
+        font-size: 14px;
+        line-height: 43px;
+    }
+    .header_links_wrap {
+        line-height: 70px;
+        font-size: 20px;
+        top: 255px;
+    }
+    .current_wrap{
+        margin-top: 104px;
+    }
+    .header_title {
+        font-size: 43px;
+        padding: 55px 20px 20px;
+    }
+    .inner_title.active {
+        border-width: 10px;
+    }
+    .btn_1,
+    .btn_2{
+        height: 66px;
+        line-height: 66px;
+        font-size: 28px;
+    }
+    .input_cell{
+        margin-bottom: 31px;
+
+        label{
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        input{
+            font-size: 28px;
+            padding: 0 18px;
+            height: 66px;
+        }
+    }
+    .mob_title{
+        padding: 40px 20px 80px 20px;
+        font-size: 43px;
+    }
+    .inner_title{
+        line-height: 98px;
+        font-size: 24px;
+        height: 98px;
+        top: -55px;
+    }
+    .check_wrap label {
+        font-size: 24px;
+        line-height: 1.1;
+    }
+    .check_wrap{
+        margin-bottom: 31px;
+    }
+    .check_wrap label a{
+        font-size: 24px;
+        line-height: 1.1;
+    }
+    .balance_numb{
+        font-size: 40px;
+        line-height: 100px;
+//        font-family: 'robotobold';
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+
+
+//        font-weight: normal;
+    }
+    .balance_title{
+        font-size: 16px;
+        line-height: 100px;
+    }
+    .datepicker_item input{
+        font-size: 16px;
+        height: 44px;
+    }
+    .datepicker_note {
+        font-size: 16px;
+        line-height: 44px;
+        margin: 0;
+    }
+    .datepicker_ico_wrap {
+        width: 90px;
+        padding-left: 38px;
+        height: 44px;
+    }
+    .datepicker_ico_wrap{
+
+        img{
+            left: 14px;
+            top: 14px;
+            width: 18px;
+        }
+    }
+    .datepicker_wrap {
+        top: 141px;
+    }
+    .data_separator{
+        margin: 16px 10px 0 10px;
+    }
+    .pagination_wrap{
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 600px){
+    .inner_title{
+        font-size: 30px;
+    }
+    .header_links_wrap {
+        line-height: 90px;
+        font-size: 30px;
+        top: 260px;
+    }
+    .current_wrap{
+        margin-top: 129px;
+    }
+    .date_table_cell {
+        font-size: 18px;
+        padding: 20px 0;
+    }
+    .date_table_row_month .date_table_cell{
+        padding-top: 50px;
+    }
+    .datepicker_ico_wrap {
+        width: 110px;
+        padding-left: 38px;
+        height: 64px;
+    }
+    .data_separator {
+        margin: 25px 10px 0 10px;
+    }
+    .datepicker_ico_wrap img {
+        left: 13px;
+        top: 21px;
+        width: 20px;
+    }
+    .datepicker_note {
+        font-size: 20px;
+        line-height: 64px;
+    }
+    .datepicker_item input {
+        font-size:20px;
+        height: 64px;
+    }
+    .datepicker_wrap {
+        top: 154px;
+        left: 49px;
+        right: 49px;
+    }
+    .date_table_wrap {
+        padding: 90px 25px 25px 25px;
+    }
+    .mob_title{
+        font-size: 50px;
+    }
+}
+@media screen and (min-width: 700px){
+    .pagination_wrap{
+        font-size: 24px;
+    }
+    .date_table_cell {
+        font-size: 24px;
+    }
+    .datepicker_ico_wrap {
+        width: 130px;
+        padding-left: 50px;
+    }
+    .datepicker_ico_wrap img {
+        width: 30px;
+        top: 17px;
+    }
+    .datepicker_note {
+        font-size: 24px;
+    }
+    .datepicker_item input {
+        font-size:24px;
+    }
+    .balance_numb{
+        font-size: 50px;
+    }
+    .balance_title{
+        font-size: 21px;
+    }
+}
+@media screen and (min-width: 768px){
+    .pagination_wrap{
+        font-size: 14px;
+        width: 50%;
+        float: left;
+        padding: 0;
+        line-height: 25px;
+
+        span{
+            margin-right: 25px;
+        }
+        a{
+            margin-right: 20px;
+        }
+    }
+    .message_wrap{
+        font-size: 14px;
+        @include box-sizing;
+        margin: 0 auto 0;
+        border-bottom: 25px solid #e3eaef;
+        line-height: 35px;
+    }
+    .btn_1,
+    .btn_2{
+        @include inblock;
+        width: 133px;
+        height: 37px;
+        line-height: 37px;
+        font-size: 14px;
+    }
+    .reset_btn{
+        margin-left: 18px;
+        color: #3c515f;
+        font-weight: bold;
+        font-size: 12px;
+        text-transform: none;
+        width: auto;
+        @include inblock;
+        border: 0;
+        background: none;
+        text-decoration: underline;
+
+        &:hover{
+            text-decoration: none;
+            color: #3c515f;
+            background: none;
+        }
+    }
+    .check_wrap label {
+        font-size: 12px;
+        line-height: 22px;
+        font-weight: bold;
+    }
+    .check_wrap label a {
+        font-size: 12px;
+        line-height: 22px;
+    }
+    .page{
+        background: url("../img/bg.jpg") no-repeat 0 0 /cover;
+    }
+    .content{
+        background: transparent;
+    }
+    .mob_title{
+        display: none;
+    }
+    .login_wrap_item{
+        width: 52%;
+        float: left;
+        &:first-child{
+            width: 48%;
+        }
+    }
+    .login_inner{
+        min-height: 200px!important;
+    }
+    .btn_wrap{
+        margin: 27px 0 0 0;
+    }
+    .input_cell{
+        margin-bottom: 13px;
+
+        label{
+            font-size: 12px;
+            margin: 9px 0 0 0;
+            float: left;
+            width: 120px;
+        }
+        input{
+            font-size: 14px;
+            padding: 0 11px;
+            height: 34px;
+        }
+    }
+    .input_wrap{
+        margin-left: 132px;
+    }
+    .inner_title{
+        width: 100%;
+        position: static;
+        height: auto;line-height: 1.1;
+        text-align: left;
+        background: none;
+        padding:  0 0 31px 0;
+        color: #3c515f;
+        font-size: 27px;
+        font-weight: bold;
+        border: 0!important;
+    }
+    .login_cell{
+        padding: 0;
+    }
+    .js-login-accordion{
+
+        .input_cell label {
+            width: 100px;
+        }
+        .input_wrap {
+            margin-left: 109px;
+        }
+    }
+    .login_wrap_item{
+        background: #f7f7f7;
+        padding: 62px 48px;
+        @include box-sizing;
+
+        &:first-child{
+            background: #fff;
+        }
+    }
+    .login_wrap:before,
+    .content:before{
+        display: none;
+    }
+    .header{
+        height: 77px;
+        background: #fff;
+    }
+    .content{
+        padding-top: 77px;
+    }
+    .login_wrap{
+        padding: 25px 0;
+        margin: 0 auto 0;
+        max-width: 943px;
+        background: transparent;
+        border: 0;
+
+        .message_wrap{
+            border: 0;
+            margin-bottom: 25px;
+        }
+    }
+    .profile_wrap .message_wrap{
+        border-bottom: 25px solid #e3eaef;
+        margin-bottom: 0;
+    }
+    .login_inner{
+        border: 0;
+    }
+    .toggle-menu-btn{
+        margin-top: 23px;
+        margin-right: 36px;
+    }
+    .toggle-menu-btn span{
+        background: #f1641e;
+        width: 30px;
+        height: 3px;
+    }
+    .toggle-menu-btn span + span {
+        margin-top: 6px;
+    }
+    .toggle-menu-btn.active .third {
+        margin-top: -3px;
+    }
+    .logo{
+        display: block;
+        width: 148px;
+        margin: 12px 0 0 34px;
+
+        img{
+            max-width: 100%;
+        }
+    }
+    .date_table_row_month{
+        display: none;
+    }
+    .date_table_row{
+
+        &:first-child{
+            display: table-row;
+
+            .date_table_cell{
+                color: #7b8da0;
+                font-size: 12px;
+
+                font-family: 'Roboto', sans-serif;
+                font-weight: bold;
+//                font-family: 'robotobold';
+                padding: 21px 12px 8px 12px;
+            }
+        }
+        .date_table_cell:nth-child(1){
+            width: 132px;
+        }
+        .date_table_cell:nth-child(3),
+        .date_table_cell:nth-child(4){
+            width: 114px;
+        }
+        .date_table_cell:nth-child(5){
+            text-align: left;
+            width: 60px;
+        }
+    }
+    .date_table_cell{
+        font-size: 14px;
+        text-transform: none;
+        padding: 12px 12px 12px 12px;
+    }
+    .only_desktop{
+        display: table-cell;
+    }
+    .balance_wrap{
+        text-align: right;
+        border: 0;
+        padding-bottom: 40px;
+
+        .balance_numb{
+            margin-right: 51px;
+        }
+    }
+    .balance_title{
+        font-size: 13px;
+        color: #7b8da0;
+        @include inblock;
+        float: none;
+        margin-right: 16px;
+        padding: 0;
+        line-height: 22px;
+        width: auto;
+    }
+    .balance_numb{
+        font-size: 26px;
+        @include inblock;
+        float: none;
+        padding: 0;
+        line-height: 21px;
+        width: auto;
+    }
+    .current_style{
+        text-align: right;
+        float: right;
+//        width: 50%;
+        border: 0;
+        margin-top: 10px;
+    }
+    .datepicker_note {
+        font-size: 14px;
+        color: #7b8da0;
+        line-height: 40px;
+//        font-family: 'robotobold';
+//        font-weight: normal;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+    }
+    .datepicker_item input {
+        font-size: 14px;
+        height: 40px;
+    }
+    .datepicker_ico_wrap {
+        width: 80px;
+        height: 36px;
+        padding-left: 36px;
+    }
+    .data_separator {
+        margin: 15px 3px 0 3px;
+    }
+    .datepicker_ico_wrap img {
+        width: 18px;
+        top: 12px;
+    }
+    .datepicker_wrap{
+        position: static;
+        width: 385px;
+        float: left;
+    }
+    .current_wrap{
+        background: #fff;
+        border: 0;
+        border-bottom: 10px solid #e3eaef;
+    }
+    .current_inner{
+        border-bottom: 1px solid #f1641e;
+        padding: 14px 49px;
+    }
+    .date_table_wrap {
+        padding: 36px 40px 0 40px;
+        border: 0;
+    }
+    .page_wrap{
+        background: #e3eaef;
+        box-sizing: border-box;
+        padding: 25px 0;
+        border-bottom: 6px solid #f1641e;
+    }
+    .page_wrap_height{
+        background: #fff;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        max-width: 946px;
+        margin: auto;
+    }
+    .width_page{
+        @include box-sizing;
+        max-width: 946px;
+        margin: auto;
+    }
+    .date_table {
+        padding-bottom: 25px;
+    }
+    .header_links_wrap {
+        font-size: 14px;
+        background: none;
+        width: 273px;
+        margin-left: -126px;
+        top: 0;
+        position: fixed;
+        height: 77px;
+        left: 50%;
+        line-height: 77px;
+        z-index: 1;
+    }
+    .header_links_wrap .header_links_item{
+        color: #3c515f;
+
+        &:first-child{
+            color: #f1641e;
+        }
+        &:hover{
+            color: #f1641e;
+        }
+    }
+    .header_links_wrap .header_links_item {
+        border-bottom: 0!important;
+    }
+    .header_title {
+        font-size: 50px;
+        padding: 46px 20px 12px 20px;
+    }
+    .header_title_note {
+        font-size: 14px;
+        padding-bottom: 40px;
+    }
+    .header_links_profile{
+        display: block;
+    }
+    .header_links_profile .header_links_item{
+        color: #f1641e;
+
+        &:first-child{
+            color: #3c515f;
+        }
+        &:hover{
+            color: #f1641e;
+        }
+    }
+    .desk_title{
+        display: block;
+        font-size: 27px;
+        text-transform: uppercase;
+        font-weight: bold;
+        position: relative;
+        line-height: 1.1;
+        padding-bottom: 5px;
+        padding-left: 10px;
+    }
+    .open_print{
+        cursor: pointer;
+        position: absolute;
+        top: 6px;
+        right: 11px;
+        background: url("../img/print_ico.png") no-repeat;
+        width: 18px;
+        height: 17px;
+    }
+    .open_pdf{
+        cursor: pointer;
+        position: absolute;
+        top: 6px;
+        right: 42px;
+        background: url("../img/pdf_ico.png") no-repeat;
+        width: 20px;
+        height: 17px;
+    }
+    .only_desktop_info{
+        display: block;
+    }
+    .prof_title{
+        font-size: 50px;
+        padding: 48px 20px 9px 20px;
+        display: block;
+    }
+    .profile_wrap{
+        border: 0;
+        max-width: 100%;
+        background: #e3eaef;
+        padding: 25px 0;
+        border-bottom: 6px solid #f1641e;
+
+        .login_wrap_item{
+            background: #fff;
+            padding: 37px 50px;
+        }
+        .login_inner{
+//            margin: 0 auto 0;
+//            max-width: 943px;
+            background: #fff;
+            min-height: 200px!important;
+        }
+    }
+    .page{
+        position: relative;
+//        border-bottom: 6px solid #000;
+
+        &:before{
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("../img/pat.png") repeat;
+        }
+    }
+    .admin_nav,
+    .profile_name{
+        color: #3c515f;
+    }
+    .profile_name{
+
+        i{
+            background: url("../img/arr_select_desk.svg") no-repeat 50% 50%;
+        }
+        &.active{
+            i{
+                background: url("../img/arr_select_active_desk.svg") no-repeat 50% 50%;
+            }
+        }
+    }
+    .profile_logout {
+        box-shadow: 0px 0px 1px rgba(0,0,0,0.2);
+    }
+    .admin_nav{
+        margin: 22px 0 0 25px;
+    }
+    .h_profile_wrap {
+        margin: 22px 25px 0 0;
+    }
+    .admin_search_wrap .search_input{
+        border-color: #ccc;
+    }
+    .align-loop{
+        width: 430px;
+        float: right;
+        position: relative;
+        margin: 25px 20px;
+    }
+    table{
+        margin-bottom: 25px;
+    }
+    .h_admin_width{
+        max-width: 946px;
+        margin: auto;
+    }
+    th{
+        font-size: 14px;
+        i{
+            background: url("../img/arr_select_desk.svg") no-repeat 50% 50%;
+            width: 8px;
+            height: 4px;
+            display: inline-block;
+            vertical-align: top;
+            margin: 7px 0 0 7px;
+        }
+    }
+    td{
+        font-size: 14px;
+    }
+    .admin_page{
+        background: none;
+
+        &:before{
+            display: none;
+        }
+    }
+    .popup_cell{
+        padding: 30px;
+    }
+    .message_popup{
+        margin: 30px 30px 0 30px;
+        padding: 0 20px;
+        border: 0;
+        font-size: 20px;
+        line-height: 45px;
+    }
+    .popup_title{
+        padding: 0 0 31px 0;
+        font-size: 27px;
+    }
+    .check_inner{
+        margin-left: 132px;
+
+        .check_wrap {
+            margin-bottom: 20px;
+        }
+        .check_wrap label {
+            padding-left: 0px;
+            padding-right: 30px;
+            font-size: 14px;
+            line-height: 22px;
+            font-weight: normal;
+        }
+    }
+    .check_cell_label{
+        font-size: 14px;
+        width: 120px;
+    }
+    .popup_inner{
+
+        .input_cell label {
+            font-size: 14px;
+        }
+        .input_cell input{
+            font-size: 14px;
+            height: 40px;
+        }
+    }
+}
+@media screen and (min-width: 850px){}
+
+@media print,
+(-o-min-device-pixel-ratio: 5/4),
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {
+}
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    thead {
+        display: table-header-group;
+    }
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    img {
+        max-width: 100% !important;
+    }
+    @page {
+        margin: 0.5cm;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+    .header_links_wrap,
+    .header{
+        display: none;
+    }
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rents</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+    <!--<script src="js/vendor/modernizr-2.7.1.min.js"></script>-->
+</head>
+<body>
+    <div class="page admin_page">
+        <div class="page_inner">
+            <div class="header h_admin clearfix">
+                <div class="h_admin_width">
+                    <div class="h_profile_wrap">
+                        <div class="profile_name">Admin <i></i></div>
+                        <div class="profile_logout">
+                            <div><a href="#">log out</a></div>
+                        </div>
+                    </div>
+                    <a class="admin_nav" href="#">user management</a>
+                </div>
+            </div>
+            <div class="content">
+                <div class="page_wrap">
+                    <div class="page_wrap_height">
+                        <div class="admin_search_wrap width_page">
+                            <div class="align-loop">
+                                <input class="btn_loop" type="submit"/>
+                                <input class="search_input" type="text"/>
+                            </div>
+                        </div>
+                        <div class="admin_table width_page">
+                            <table>
+                                <tr>
+                                    <th>Customer Number <i></i></th>
+                                    <th>Name</th>
+                                    <th>Address</th>
+                                    <th>Status</th>
+                                </tr>
+                                <tr>
+                                    <td>45343535321</td>
+                                    <td>Smith T.</td>
+                                    <td>test address</td>
+                                    <td>Active</td>
+                                </tr>
+                                <tr>
+                                    <td>45343535321</td>
+                                    <td>Smith T.</td>
+                                    <td>test address address</td>
+                                    <td>Active</td>
+                                </tr>
+                                <tr>
+                                    <td>45343535321</td>
+                                    <td>Smith T.</td>
+                                    <td>test address</td>
+                                    <td>Active</td>
+                                </tr>
+                                <tr>
+                                    <td>45343535321</td>
+                                    <td>Smith T.</td>
+                                    <td>test address</td>
+                                    <td>Active</td>
+                                </tr>
+                            </table>
+                            <div class="pagination_wrap"><span>1/3</span> <a class="pagination_btn" href="#">Prev</a><a class="pagination_btn" href="#">Next</a></div>
+                        </div>
+                        <div class="ww">
+                            <div class="btn_1 open_popup" data-fancybox-href="#popup_wrap">open popup</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div class="footer">-->
+        <!--<div class="footer_inner">-->
+            <!---->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div style="display: none;">
+        <div id="popup_wrap" class="popup_wrap">
+            <div class="message_wrap message_popup error_message">Password entries do not match</div>
+            <div class="popup_inner clearfix">
+                <div class="popup_cell">
+                    <div class="popup_title">personal details</div>
+                    <div class="login_wrap_cell">
+                        <form>
+                            <div class="login_cell">
+                                <div class="input_cell clearfix">
+                                    <label for="profName">Customer Name</label>
+                                    <div class="input_wrap">
+                                        <input id="profName" disabled value="Y524" type="text"/>
+                                    </div>
+                                </div>
+                                <div class="input_cell clearfix">
+                                    <label for="profTempPass">Temporary Password</label>
+                                    <div class="input_wrap">
+                                        <input id="profTempPass" disabled value="Y524" type="text"/>
+                                    </div>
+                                </div>
+                                <div class="input_cell clearfix">
+                                    <label for="profCustomer">Customer No</label>
+                                    <div class="input_wrap">
+                                        <input id="profCustomer" disabled value="Y524" type="text"/>
+                                    </div>
+                                </div>
+                                <div class="input_cell clearfix">
+                                    <label for="profNumb">Dr Number</label>
+                                    <div class="input_wrap">
+                                        <input id="profNumb" disabled value="Y524" type="text"/>
+                                    </div>
+                                </div>
+                                <div class="input_cell clearfix">
+                                    <label for="profEmail">Email</label>
+                                    <div class="input_wrap">
+                                        <input class="error" id="profEmail" value="gerry@ascendas.ie" type="text"/>
+                                    </div>
+                                </div>
+                                <div class="input_cell clearfix">
+                                    <label for="profPhone">Phone</label>
+                                    <div class="input_wrap">
+                                        <input id="profPhone" value="+45 6344612172" type="text"/>
+                                    </div>
+                                </div>
+                                <div class="check_cell clearfix">
+                                    <div class="check_cell_label">Status</div>
+                                    <div class="check_inner">
+                                        <div class="check_wrap">
+                                            <input id="check1" value="" name="radio" checked="" type="radio">
+                                            <label for="check1">Active</label>
+                                        </div>
+                                        <div class="check_wrap">
+                                            <input id="check2" value="" name="radio"  type="radio">
+                                            <label for="check2">Closed</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="btn_wrap">
+                                    <button class="btn_2">Update</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="popup_cell">
+                    <div class="popup_title">password</div>
+                    <div class="login_wrap_cell">
+                        <form action="">
+                            <div class="login_cell">
+                                <div class="input_cell clearfix">
+                                    <label for="profCurrPass">Current Password</label>
+                                    <div class="input_wrap"><input id="profCurrPass" type="password"/></div>
+                                </div>
+                                <div class="btn_wrap">
+                                    <button class="btn_2">Change</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+    <!--<script src="js/vendor/jquery-migrate-1.2.1.min.js"></script>-->
+    <script src="js/plugins/jquery-ui.js"></script>
+    <script src="js/plugins/jquery.fancybox.pack.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
