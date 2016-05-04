@@ -112,10 +112,17 @@ $(function () {
     var clientHeight = document.documentElement.clientHeight;
     var headerHeight =  $('.header').height();
     var mobTitleHeight =  $('.mob_title').outerHeight();
-    var message =  $('.message_wrap').outerHeight();
+    var message =  $('.message_wrap').outerHeight(true);
     var titleNoteHeight =  $('.header_title_note').outerHeight();
-    var titleHeight =  $('.prof_title').outerHeight();
+//    var titleHeight =  $('.prof_title').outerHeight();
     var headerTitleHeight =  $('.header_title').outerHeight();
+    console.log('clientHeight ' + clientHeight);
+    console.log('headerHeight ' + headerHeight);
+    console.log('mob_title ' + mobTitleHeight);
+    console.log('message ' + message);
+    console.log('header_title_note ' + titleNoteHeight);
+//    console.log('prof_title ' + titleHeight);
+    console.log('header_title ' + headerTitleHeight);
 
     function setHeightMob() {
 //        var clientHeight = document.documentElement.clientHeight;
@@ -134,10 +141,12 @@ $(function () {
 //        var headerTitleHeight =  $('.header_title').outerHeight();
 //        var titleNoteHeight =  $('.header_title_note').outerHeight();
 //        var titleProfHeight =  $('.prof_title').outerHeight();
-        var contentHeight = clientHeight - headerHeight - headerTitleHeight - titleHeight - titleNoteHeight - 60 ;
+//        var contentHeight = clientHeight - headerHeight - headerTitleHeight - titleHeight - titleNoteHeight - 60 ;
+        var contentHeight = clientHeight - headerHeight - headerTitleHeight - mobTitleHeight - titleNoteHeight - 50;
         $('.page_wrap').css("min-height", contentHeight);
         $('.profile_wrap').css("min-height", contentHeight);
         $('.page_wrap_height').css("min-height", contentHeight);
+//        $('.login_wrap_item').css("min-height", contentHeight);
     }
 
     setHeightContent();
@@ -149,7 +158,7 @@ $(function () {
         mobTitleHeight =  $('.mob_title').outerHeight();
         message =  $('.message_wrap').outerHeight();
         titleNoteHeight =  $('.header_title_note').outerHeight();
-        titleHeight =  $('.prof_title').outerHeight();
+//        titleHeight =  $('.prof_title').outerHeight();
         headerTitleHeight =  $('.header_title').outerHeight();
 
         toggleVisibleLoginAndRegistrationPanel();
@@ -177,7 +186,8 @@ $(function () {
 //                var message =  $('.message_wrap').outerHeight();
 //                var titleHeight =  $('.prof_title').outerHeight();
 //                var titleNoteHeight =  $('.header_title_note').outerHeight();
-                var contentHeight = clientHeight - headerHeight - titleHeight - titleNoteHeight - message - 75 ;
+//                var contentHeight = clientHeight - headerHeight - titleHeight - titleNoteHeight - mobTitleHeight - message - 75 ;
+                var contentHeight = clientHeight - headerHeight - titleNoteHeight - mobTitleHeight - message - 50;
                 $('.login_wrap_item').css("min-height", contentHeight);
             }
         }

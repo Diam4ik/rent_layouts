@@ -18,8 +18,9 @@
         font-size: 20px;
     }
     .header_links_wrap {
+        line-height: 39px;
         font-size: 15px;
-        top: 208px;
+        top: 214px;
     }
     .date_table_wrap{
         border: 25px solid #ebf0f4;
@@ -58,9 +59,9 @@
         line-height: 43px;
     }
     .header_links_wrap {
-        line-height: 70px;
+        line-height: 67px;
         font-size: 20px;
-        top: 255px;
+        top: 262px;
     }
     .current_wrap{
         margin-top: 104px;
@@ -164,9 +165,9 @@
         font-size: 30px;
     }
     .header_links_wrap {
-        line-height: 90px;
+        line-height: 88px;
         font-size: 30px;
-        top: 260px;
+        top: 267px;
     }
     .current_wrap{
         margin-top: 129px;
@@ -240,12 +241,28 @@
     }
 }
 @media screen and (min-width: 768px){
+    .logout_wrap{
+        display: block;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: bold;
+        margin-right: 36px;
+        color: #3c515f;
+        font-size: 14px;
+        line-height: 77px;
+        float: right;
+        @include transition(all);
+
+        &:hover{
+            color: #f1641e;
+        }
+    }
     .pagination_wrap{
         font-size: 14px;
         width: 50%;
         float: left;
         padding: 0;
-        line-height: 25px;
+        line-height: 1.1;
 
         span{
             margin-right: 25px;
@@ -307,10 +324,10 @@
     }
 
     .login_wrap_item{
-        width: 52%;
+        width: 50%;
         float: left;
         &:first-child{
-            width: 48%;
+            width: 50%;
         }
     }
 
@@ -327,7 +344,7 @@
             font-size: 12px;
             margin: 9px 0 0 0;
             float: left;
-            width: 120px;
+            width: 130px;
         }
         input{
             font-size: 14px;
@@ -393,7 +410,7 @@
     .login_wrap{
         padding: 25px 0;
         margin: 0 auto 0;
-        max-width: 942px;
+        max-width: 1040px;
         background: transparent;
         border: 0;
 
@@ -410,6 +427,7 @@
         border: 0;
     }
     .toggle-menu-btn{
+        display: none;
         margin-top: 23px;
         margin-right: 36px;
     }
@@ -552,19 +570,31 @@
         background: #e3eaef;
         box-sizing: border-box;
         padding: 25px 0;
-        border-bottom: 6px solid #f1641e;
+        position: relative;
+
+        &:after{
+            content: "";
+            position: absolute;
+            display: block;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 6px;
+            background: #f1641e;
+        }
     }
+
     .page_wrap_height{
         background: #fff;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        max-width: 946px;
+        max-width: 1040px;
         margin: auto;
     }
     .width_page{
         @include box-sizing;
-        max-width: 946px;
+        max-width: 1040px;
         margin: auto;
     }
     .date_table {
@@ -652,15 +682,31 @@
         padding: 48px 20px 9px 20px;
         display: block;
     }
+    .only_mob{
+        height: 0;
+        display: none;
+        padding: 0;
+    }
     .profile_wrap{
         border: 0;
         max-width: 100%;
         background: #e3eaef;
-        padding: 25px 0;
-        border-bottom: 6px solid #f1641e;
+//        padding: 25px 0;
+        padding: 25px 0 ;
+//        border-bottom: 6px solid #f1641e;
 
+        &:after{
+            content: "";
+            position: absolute;
+            display: block;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 6px;
+            background: #f1641e;
+        }
         .login_wrap_item{
-            background: #fff;
+//            background: #fff;
             padding: 37px 50px;
         }
         .login_inner{
@@ -721,7 +767,7 @@
         margin-bottom: 25px;
     }
     .h_admin_width{
-        max-width: 946px;
+        max-width: 1040px;
         margin: auto;
     }
     th{
@@ -787,8 +833,16 @@
             height: 40px;
         }
     }
+    .input_cell label{
+        font-size: 13px;
+    }
 }
-@media screen and (min-width: 850px){}
+@media screen and (max-width: 768px){
+    .page_wrap_height,
+    .page_wrap{
+        min-height: 20px!important;
+    }
+}
 
 @media print,
 (-o-min-device-pixel-ratio: 5/4),

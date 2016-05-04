@@ -12,6 +12,7 @@ body {
     background-color: #fff;
 //    font: 400 12px/1.1 'robotoregular', Arial, Helvetica, sans-serif;
     font-family: 'Roboto', sans-serif;
+    line-height: 1.1;
     color: $clr_def;
     min-width: $page_min;
 
@@ -742,4 +743,30 @@ td{
     .check_wrap label::before{
         border-radius: 50%;
     }
+}
+.nav{
+//    display: none;
+    position: fixed;
+    top: 77px;
+    right: -165px;
+    padding: 20px;
+    width: 160px;
+    background: #fff;
+    @include box-sizing;
+    @include transition(all);
+
+    &.open{
+//        display: block;
+        right: 0;
+    }
+
+    a{
+        line-height: 1.8;
+        font-size: 20px;
+        color: #3c515f;
+        text-decoration: none;
+    }
+}
+.logout_wrap{
+    display: none;
 }
