@@ -131,6 +131,15 @@
     .datepicker_item input{
         font-size: 16px;
         height: 44px;
+        color: #7b8da0;
+        font-weight: bold;
+    }
+    .datepicker_item{
+
+        ::-webkit-input-placeholder {color:#7b8da0;}
+        ::-moz-placeholder          {color:#7b8da0;}/* Firefox 19+ */
+        :-moz-placeholder           {color:#7b8da0;}/* Firefox 18- */
+        :-ms-input-placeholder      {color:#7b8da0;}
     }
     .datepicker_note {
         font-size: 16px;
@@ -146,8 +155,8 @@
 
         img{
             left: 14px;
-            top: 14px;
-            width: 18px;
+            top: 12px;
+            width: 17px;
         }
     }
     .datepicker_wrap {
@@ -190,7 +199,7 @@
     .datepicker_ico_wrap img {
         left: 13px;
         top: 21px;
-        width: 20px;
+        width: 17px;
     }
     .datepicker_note {
         font-size: 20px;
@@ -224,8 +233,8 @@
         padding-left: 50px;
     }
     .datepicker_ico_wrap img {
-        width: 30px;
-        top: 17px;
+        width: 17px;
+        top: 24px;
     }
     .datepicker_note {
         font-size: 24px;
@@ -261,7 +270,7 @@
         font-size: 14px;
         width: 50%;
         float: left;
-        padding: 0;
+        padding: 4px 0 0 0;
         line-height: 1.1;
 
         span{
@@ -353,7 +362,7 @@
         }
     }
     .input_wrap{
-        margin-left: 132px;
+        margin-left: 140px;
     }
     .inner_title{
         width: 100%;
@@ -381,10 +390,10 @@
     .js-login-accordion{
 
         .input_cell label {
-            width: 100px;
+            width: 130px;
         }
         .input_wrap {
-            margin-left: 109px;
+            margin-left: 140px;
         }
     }
     .login_wrap_item{
@@ -545,8 +554,8 @@
         margin: 9px 3px 0 3px;
     }
     .datepicker_ico_wrap img {
-        width: 18px;
-        top: 9px;
+        width: 17px;
+        top: 10px;
     }
     .datepicker_wrap{
         position: static;
@@ -569,7 +578,7 @@
     .page_wrap{
         background: #e3eaef;
         box-sizing: border-box;
-        padding: 25px 0;
+        padding: 25px 0 30px 0;
         position: relative;
 
         &:after{
@@ -579,7 +588,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            height: 6px;
+            height: 5px;
             background: #f1641e;
         }
     }
@@ -692,7 +701,7 @@
         max-width: 100%;
         background: #e3eaef;
 //        padding: 25px 0;
-        padding: 25px 0 ;
+        padding: 25px 0 30px 0;
 //        border-bottom: 6px solid #f1641e;
 
         &:after{
@@ -702,7 +711,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            height: 6px;
+            height: 5px;
             background: #f1641e;
         }
         .login_wrap_item{

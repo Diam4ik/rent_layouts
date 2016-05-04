@@ -141,12 +141,11 @@ $(function () {
 //        var headerTitleHeight =  $('.header_title').outerHeight();
 //        var titleNoteHeight =  $('.header_title_note').outerHeight();
 //        var titleProfHeight =  $('.prof_title').outerHeight();
-//        var contentHeight = clientHeight - headerHeight - headerTitleHeight - titleHeight - titleNoteHeight - 60 ;
-        var contentHeight = clientHeight - headerHeight - headerTitleHeight - mobTitleHeight - titleNoteHeight - 50;
+//        var contentHeight = clientHeight - headerHeight - headerTitleHeight - titleHeight - titleNoteHeight - 50 ;
+        var contentHeight = clientHeight - headerHeight - headerTitleHeight - mobTitleHeight - titleNoteHeight - 55;
         $('.page_wrap').css("min-height", contentHeight);
         $('.profile_wrap').css("min-height", contentHeight);
         $('.page_wrap_height').css("min-height", contentHeight);
-//        $('.login_wrap_item').css("min-height", contentHeight);
     }
 
     setHeightContent();
@@ -187,7 +186,7 @@ $(function () {
 //                var titleHeight =  $('.prof_title').outerHeight();
 //                var titleNoteHeight =  $('.header_title_note').outerHeight();
 //                var contentHeight = clientHeight - headerHeight - titleHeight - titleNoteHeight - mobTitleHeight - message - 75 ;
-                var contentHeight = clientHeight - headerHeight - titleNoteHeight - mobTitleHeight - message - 50;
+                var contentHeight = clientHeight - headerHeight - titleNoteHeight - mobTitleHeight - message - 55;
                 $('.login_wrap_item').css("min-height", contentHeight);
             }
         }

@@ -528,7 +528,7 @@ a {
 /*! jQuery UI - v1.11.4 - 2016-03-28
 * http://jqueryui.com
 * Includes: core.css, datepicker.css, theme.css
-* To view and modify this theme, visit http://jqueryui.com/themeroller/?ffDefault=Arial%2CHelvetica%2Csans-serif&fsDefault=1em&fwDefault=normal&cornerRadius=3px&bgColorHeader=e9e9e9&bgTextureHeader=flat&borderColorHeader=dddddd&fcHeader=333333&iconColorHeader=444444&bgColorContent=ffffff&bgTextureContent=flat&borderColorContent=dddddd&fcContent=333333&iconColorContent=444444&bgColorDefault=f6f6f6&bgTextureDefault=flat&borderColorDefault=c5c5c5&fcDefault=454545&iconColorDefault=777777&bgColorHover=ededed&bgTextureHover=flat&borderColorHover=cccccc&fcHover=2b2b2b&iconColorHover=555555&bgColorActive=007fff&bgTextureActive=flat&borderColorActive=003eff&fcActive=ffffff&iconColorActive=ffffff&bgColorHighlight=fffa90&bgTextureHighlight=flat&borderColorHighlight=dad55e&fcHighlight=777620&iconColorHighlight=777620&bgColorError=fddfdf&bgTextureError=flat&borderColorError=f1a899&fcError=5f3f3f&iconColorError=cc0000&bgColorOverlay=aaaaaa&bgTextureOverlay=flat&bgImgOpacityOverlay=0&opacityOverlay=30&bgColorShadow=666666&bgTextureShadow=flat&bgImgOpacityShadow=0&opacityShadow=30&thicknessShadow=5px&offsetTopShadow=0px&offsetLeftShadow=0px&cornerRadiusShadow=8px
+* To view and modify this theme, visit http://jqueryui.com/themeroller/?ffDefault=Arial%2CHelvetica%2Csans-serif&fsDefault=1em&fwDefault=normal&cornerRadius=3px&bgColorHeader=e9e9e9&bgTextureHeader=flat&borderColorHeader=dddddd&fcHeader=3c515f&iconColorHeader=444444&bgColorContent=ffffff&bgTextureContent=flat&borderColorContent=dddddd&fcContent=3c515f&iconColorContent=444444&bgColorDefault=f6f6f6&bgTextureDefault=flat&borderColorDefault=c5c5c5&fcDefault=454545&iconColorDefault=777777&bgColorHover=ededed&bgTextureHover=flat&borderColorHover=cccccc&fcHover=2b2b2b&iconColorHover=555555&bgColorActive=007fff&bgTextureActive=flat&borderColorActive=003eff&fcActive=ffffff&iconColorActive=ffffff&bgColorHighlight=fffa90&bgTextureHighlight=flat&borderColorHighlight=dad55e&fcHighlight=777620&iconColorHighlight=777620&bgColorError=fddfdf&bgTextureError=flat&borderColorError=f1a899&fcError=5f3f3f&iconColorError=cc0000&bgColorOverlay=aaaaaa&bgTextureOverlay=flat&bgImgOpacityOverlay=0&opacityOverlay=30&bgColorShadow=666666&bgTextureShadow=flat&bgImgOpacityShadow=0&opacityShadow=30&thicknessShadow=5px&offsetTopShadow=0px&offsetLeftShadow=0px&cornerRadiusShadow=8px
 * Copyright jQuery Foundation and other contributors; Licensed MIT */
 /* Layout helpers
 ----------------------------------*/
@@ -771,7 +771,7 @@ a {
 /* Component containers
 ----------------------------------*/
 .ui-widget {
-  font-family: Arial,Helvetica,sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1em; }
 
 .ui-widget .ui-widget {
@@ -787,19 +787,19 @@ a {
 .ui-widget-content {
   border: 1px solid #dddddd;
   background: #ffffff;
-  color: #333333; }
+  color: #3c515f; }
 
 .ui-widget-content a {
-  color: #333333; }
+  color: #3c515f; }
 
 .ui-widget-header {
   border: 1px solid #dddddd;
   background: #EBF0F4;
-  color: #333333;
+  color: #3c515f;
   font-weight: bold; }
 
 .ui-widget-header a {
-  color: #333333; }
+  color: #3c515f; }
 
 /* Interaction states
 ----------------------------------*/
@@ -2310,7 +2310,21 @@ td {
 
   .datepicker_item input {
     font-size: 16px;
-    height: 44px; }
+    height: 44px;
+    color: #7b8da0;
+    font-weight: bold; }
+
+  .datepicker_item {
+    /* Firefox 19+ */
+    /* Firefox 18- */ }
+    .datepicker_item ::-webkit-input-placeholder {
+      color: #7b8da0; }
+    .datepicker_item ::-moz-placeholder {
+      color: #7b8da0; }
+    .datepicker_item :-moz-placeholder {
+      color: #7b8da0; }
+    .datepicker_item :-ms-input-placeholder {
+      color: #7b8da0; }
 
   .datepicker_note {
     font-size: 16px;
@@ -2324,8 +2338,8 @@ td {
 
   .datepicker_ico_wrap img {
     left: 14px;
-    top: 14px;
-    width: 18px; }
+    top: 12px;
+    width: 17px; }
 
   .datepicker_wrap {
     top: 141px; }
@@ -2365,7 +2379,7 @@ td {
   .datepicker_ico_wrap img {
     left: 13px;
     top: 21px;
-    width: 20px; }
+    width: 17px; }
 
   .datepicker_note {
     font-size: 20px;
@@ -2397,8 +2411,8 @@ td {
     padding-left: 50px; }
 
   .datepicker_ico_wrap img {
-    width: 30px;
-    top: 17px; }
+    width: 17px;
+    top: 24px; }
 
   .datepicker_note {
     font-size: 24px; }
@@ -2434,7 +2448,7 @@ td {
     font-size: 14px;
     width: 50%;
     float: left;
-    padding: 0;
+    padding: 4px 0 0 0;
     line-height: 1.1; }
     .pagination_wrap span {
       margin-right: 25px; }
@@ -2520,7 +2534,7 @@ td {
       height: 34px; }
 
   .input_wrap {
-    margin-left: 132px; }
+    margin-left: 140px; }
 
   .inner_title {
     width: 100%;
@@ -2542,9 +2556,9 @@ td {
       line-height: 35px; }
 
   .js-login-accordion .input_cell label {
-    width: 100px; }
+    width: 130px; }
   .js-login-accordion .input_wrap {
-    margin-left: 109px; }
+    margin-left: 140px; }
 
   .login_wrap_item {
     background: #f7f7f7;
@@ -2691,8 +2705,8 @@ td {
     margin: 9px 3px 0 3px; }
 
   .datepicker_ico_wrap img {
-    width: 18px;
-    top: 9px; }
+    width: 17px;
+    top: 10px; }
 
   .datepicker_wrap {
     position: static;
@@ -2715,7 +2729,7 @@ td {
   .page_wrap {
     background: #e3eaef;
     box-sizing: border-box;
-    padding: 25px 0;
+    padding: 25px 0 30px 0;
     position: relative; }
     .page_wrap:after {
       content: "";
@@ -2724,7 +2738,7 @@ td {
       left: 0;
       right: 0;
       bottom: 0;
-      height: 6px;
+      height: 5px;
       background: #f1641e; }
 
   .page_wrap_height {
@@ -2830,7 +2844,7 @@ td {
     border: 0;
     max-width: 100%;
     background: #e3eaef;
-    padding: 25px 0; }
+    padding: 25px 0 30px 0; }
     .profile_wrap:after {
       content: "";
       position: absolute;
@@ -2838,7 +2852,7 @@ td {
       left: 0;
       right: 0;
       bottom: 0;
-      height: 6px;
+      height: 5px;
       background: #f1641e; }
     .profile_wrap .login_wrap_item {
       padding: 37px 50px; }
