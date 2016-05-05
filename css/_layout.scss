@@ -35,6 +35,84 @@ body {
     z-index: 1;
 }
 
+.page-title-wrapper{
+    background: url("../img/bg_mob.jpg") no-repeat 0 0;
+    background-size: cover;
+    position: relative;
+    height: 223px;
+    z-index: 0;
+
+    &:before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("../img/pat.png") repeat;
+        z-index: -1;
+    }
+    &.sticked {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        height: 175px;
+
+        + .page_wrap{padding-top: 210px;}
+        + .login_wrap{
+            padding-top: 175px;
+        }
+        .header_title_note{
+            display: none;
+        }
+        .header_title {
+            padding: 65px 20px 10px;
+        }
+    }
+}
+
+.page-login-title-wrapper{
+    height: 200px;
+    &.sticked {
+         height:200px;
+        + .login_wrap{
+            padding-top: 200px;
+        }
+//        .mob_title{
+//            padding: 35px 20px 0 20px;
+//        }
+    }
+}
+.nav_btn{}
+.header-btns-panel{
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: none;
+    bottom: 0;
+}
+.header-btn{
+    flex:1;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 5px solid transparent;
+    @include box-sizing;
+    cursor: pointer;
+
+    &.active {
+        border-color: #ef642d;
+    }
+}
+
 .logo {
 
     a {
@@ -152,12 +230,12 @@ body {
         @include transition(all, 0.35s, ease-out, 0s);
         background-color: #fff;
         display: block;
-        height: 5px;
-        width: 42px;
+        height: 3px;
+        width: 22px;
         margin: 0 auto 0;
     }
     span + span {
-        margin-top: 7px;
+        margin-top: 4px;
     }
     &.active{
 
@@ -172,47 +250,32 @@ body {
             @include transition(all, 0s, ease-out, 0s);
         }
         .third {
-            margin-top: -5px;
+            margin-top: -3px;
             transform: rotate(-45deg);
         }
     }
 }
 .content{
     position: relative;
-    padding-top: 60px;
-    background: url("../img/bg_mob.jpg") no-repeat 100% 0 fixed;
-//    background: url("../img/bg.jpg") no-repeat 0 0 /cover;
     z-index: 0;
-
-    &:before{
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url("../img/pat.png") repeat;
-        z-index: -1;
-    }
 }
 .mob_title{
-    font-size: 30px;
+    font-size: 33px;
     text-transform: uppercase;
     text-align: center;
-    padding: 30px 20px;
+    padding: 59px 20px 0 20px;
     font-weight: bold;
 }
 .login_wrap{
-    margin-top: 40px;
-    padding-top: 42px;
+    //margin-top: 40px;
+    //padding-top: 42px;
     position: relative;
 
     &:before{
         content: "";
         display: block;
         position: absolute;
-        top: 42px;
+        top: 0;
         height: 5px;
         left: 0;
         right: 0;
@@ -222,36 +285,20 @@ body {
 .login_wrap_item{
     background: #fff;
     color: #000;
-
-    &:first-child{
-
-        .inner_title{
-            left: 0;
-            right: auto;
-        }
-    }
 }
 .inner_title{
-    position: absolute;
-    top: -8px;
-    background: rgba(0,0,0,0.3);
-    height: 50px;
     @include box-sizing;
-    width: 50%;
-    right: 0;
-    text-align: center;
     text-transform: uppercase;
-    color: #fff;
-    line-height: 46px;
-    font-size: 16px;
-
-    &.active{
-        border-bottom: 5px solid #ef642d;
-    }
+    line-height: 1.1;
+    padding:  0 0 31px;
+    color: #3c515f;
+    font-size: 27px;
+    font-weight: bold;
 }
 .login_inner{
     border: 25px solid #ebf0f4;
     background: #fff;
+    overflow: hidden;
 }
 .input_cell{
     margin-bottom: 20px;
@@ -263,17 +310,17 @@ body {
 
 
         color: #7b8da0;
-        font-size: 20px;
+        font-size: 12px;
         display: block;
         margin-bottom: 10px;
     }
     input{
         @include box-sizing;
         border: 1px solid #dce0e2;
-        font-size: 22px;
+        font-size: 12px;
         color: #3c515f;
-        padding: 0 8px;
-        height: 40px;
+        padding: 0 11px;
+        height: 33px;
         width: 100%;
         display: block;
 
@@ -357,11 +404,11 @@ body {
     text-align: center;
     font-weight: bold;
     text-transform: uppercase;
-    padding: 40px 20px 10px;
+    padding: 85px 20px 10px;
 }
 .header_title_note{
     color: #fff;
-    font-size: 10px;
+    font-size: 11px;
     text-align: center;
     text-transform: uppercase;
     padding-bottom: 29px;
@@ -376,7 +423,7 @@ body {
     border-left: 1px solid #f6f5f7;
     border-right: 1px solid #f6f5f7;
     position: relative;
-    margin-top: 60px;
+//    margin-top: 60px;
 }
 .current_inner{
     border-bottom: 1px solid #babec1;
@@ -391,16 +438,16 @@ body {
     padding: 70px 12px 12px 12px;
 }
 .balance_title{
-    font-size: 9px;
+    font-size: 10px;
     text-transform: uppercase;
     line-height: 45px;
     width: 50%;
     float: left;
     @include box-sizing;
-    padding: 0 37px;
+    padding: 0 0 0 24px;
 }
 .balance_numb{
-    font-size: 21px;
+    font-size: 22px;
     text-transform: uppercase;
     font-weight: bold;
     line-height: 45px;
@@ -408,10 +455,10 @@ body {
     float: left;
     text-align: right;
     @include box-sizing;
-    padding: 0 37px;
+    padding: 0 24px;
 }
 .datepicker_note{
-    font-size: 10px;
+    font-size: 11px;
     margin-bottom: 12px;
 }
 .page_wrap{
@@ -434,7 +481,7 @@ body {
     input{
         background: transparent;
         color: #3c515f;
-        font-size: 10px;
+        font-size: 11px;
         outline: 0;
         border: 0;
         width: 100%;
@@ -483,7 +530,7 @@ body {
     border-bottom: 1px solid #ccc;
     padding: 8px 0;
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 11px;
 
     &:last-child{
         text-align: right;
@@ -495,6 +542,7 @@ body {
     padding-top: 20px;
 }
 .header_links_wrap{
+    display: none;
     background: rgba(0, 0, 0, 0.3);
     line-height: 40px;
     text-align: center;
@@ -539,8 +587,8 @@ body {
 .message_wrap{
     background: #3fb34f;
     padding: 0 45px;
-    line-height: 40px;
-    font-size: 15px;
+    line-height: 36px;
+    font-size: 11px;
     color: #fff;
 
 //    font-family: 'robotobold';
@@ -552,7 +600,7 @@ body {
 }
 .pagination_wrap{
     padding: 20px 0 10px 0;
-    font-size: 14px;
+    font-size: 11px;
     color: #3c515f;
 
     span{
@@ -624,6 +672,7 @@ body {
 .admin_search_wrap{
     margin: 0 20px 20px 20px;
     position: relative;
+    border: 1px solid #ccc;
 
     .btn_loop{
         width: 18px;
@@ -678,10 +727,10 @@ td{
 .popup_inner{
 
     .input_cell label {
-        font-size: 14px;
+        font-size: 12px;
     }
     .input_cell input{
-        font-size: 14px;
+        font-size: 12px;
         height: 30px;
     }
     .btn_1, .btn_2 {
@@ -769,4 +818,13 @@ td{
 }
 .logout_wrap{
     display: none;
+}
+.admin_page{
+
+    .page_wrap_height{
+        margin-top: 77px;
+    }
+}
+.h_admin{
+    background: #ef642d;
 }

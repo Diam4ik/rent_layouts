@@ -1,4 +1,10 @@
+@media screen and (min-width: 360px){
+
+}
 @media screen and (min-width: 380px){
+    .header-btn{
+        font-size: 20px;
+    }
     .datepicker_note{
         @include inblock;
         font-size: 10px;
@@ -10,6 +16,9 @@
     .datepicker{
         float: right;
         text-align: right;
+    }
+    .input_cell label{
+//        font-size: 20px;
     }
 }
 @media screen and (min-width: 400px){
@@ -26,7 +35,7 @@
         border: 25px solid #ebf0f4;
     }
     .date_table_cell {
-        font-size: 14px;
+        font-size: 16px;
         padding: 15px 0;
     }
     .datepicker_note {
@@ -64,13 +73,13 @@
         top: 262px;
     }
     .current_wrap{
-        margin-top: 104px;
+//        margin-top: 104px;
     }
     .header_title {
         font-size: 43px;
-        padding: 55px 20px 20px;
+//        padding: 55px 20px 20px;
     }
-    .inner_title.active {
+    .header-btn {
         border-width: 10px;
     }
     .btn_1,
@@ -84,11 +93,11 @@
 
         label{
             font-weight: bold;
-            font-size: 24px;
+            font-size: 20px;
             margin-bottom: 10px;
         }
         input{
-            font-size: 28px;
+            font-size: 24px;
             padding: 0 18px;
             height: 66px;
         }
@@ -97,21 +106,15 @@
         padding: 40px 20px 80px 20px;
         font-size: 43px;
     }
-    .inner_title{
-        line-height: 98px;
-        font-size: 24px;
-        height: 98px;
-        top: -55px;
-    }
     .check_wrap label {
-        font-size: 24px;
+        font-size: 20px;
         line-height: 1.1;
     }
     .check_wrap{
         margin-bottom: 31px;
     }
     .check_wrap label a{
-        font-size: 24px;
+        font-size: 20px;
         line-height: 1.1;
     }
     .balance_numb{
@@ -125,14 +128,13 @@
 //        font-weight: normal;
     }
     .balance_title{
-        font-size: 16px;
+        font-size: 20px;
         line-height: 100px;
     }
     .datepicker_item input{
         font-size: 16px;
         height: 44px;
         color: #7b8da0;
-        font-weight: bold;
     }
     .datepicker_item{
 
@@ -170,8 +172,8 @@
     }
 }
 @media screen and (min-width: 600px){
-    .inner_title{
-        font-size: 30px;
+    .header-btn{
+//        font-size: 30px;
     }
     .header_links_wrap {
         line-height: 88px;
@@ -179,10 +181,10 @@
         top: 267px;
     }
     .current_wrap{
-        margin-top: 129px;
+//        margin-top: 129px;
     }
     .date_table_cell {
-        font-size: 18px;
+        font-size: 20px;
         padding: 20px 0;
     }
     .date_table_row_month .date_table_cell{
@@ -202,7 +204,7 @@
         width: 17px;
     }
     .datepicker_note {
-        font-size: 20px;
+        font-size: 19px;
         line-height: 64px;
     }
     .datepicker_item input {
@@ -270,7 +272,7 @@
         font-size: 14px;
         width: 50%;
         float: left;
-        padding: 4px 0 0 0;
+        padding: 2px 0 0 0;
         line-height: 1.1;
 
         span{
@@ -364,18 +366,6 @@
     .input_wrap{
         margin-left: 140px;
     }
-    .inner_title{
-        width: 100%;
-        position: static;
-        height: auto;line-height: 1.1;
-        text-align: left;
-        background: none;
-        padding:  0 0 31px 0;
-        color: #3c515f;
-        font-size: 27px;
-        font-weight: bold;
-        border: 0!important;
-    }
     .login_cell{
         padding: 0;
 
@@ -413,15 +403,18 @@
         height: 77px;
         background: #fff;
     }
-    .content{
+    .page-title-wrapper{
         padding-top: 77px;
     }
+
     .login_wrap{
-        padding: 25px 0;
-        margin: 0 auto 0;
+        position: static;
+        //padding: 25px 0;
+        margin: 0 auto;
         max-width: 1040px;
         background: transparent;
         border: 0;
+        padding: 25px 0 30px 0;
 
         .message_wrap{
             border: 0;
@@ -430,6 +423,7 @@
     }
     .profile_wrap .message_wrap{
         border-bottom: 25px solid #e3eaef;
+//        border-top: 25px solid #e3eaef;
         margin-bottom: 0;
     }
     .login_inner{
@@ -635,10 +629,12 @@
         border-bottom: 0!important;
     }
     .header_title {
+        position: static;
         font-size: 50px;
         padding: 46px 20px 12px 20px;
     }
     .header_title_note {
+        position: static;
         font-size: 14px;
         padding-bottom: 40px;
     }
@@ -700,9 +696,7 @@
         border: 0;
         max-width: 100%;
         background: #e3eaef;
-//        padding: 25px 0;
-        padding: 25px 0 30px 0;
-//        border-bottom: 6px solid #f1641e;
+//        padding: 25px 0 30px;
 
         &:after{
             content: "";
@@ -721,8 +715,8 @@
         .login_inner{
 //            margin: 0 auto 0;
 //            max-width: 943px;
-            background: #fff;
-            min-height: 200px!important;
+//            background: #fff;
+//            min-height: 200px!important;
         }
     }
     .page{
@@ -845,11 +839,30 @@
     .input_cell label{
         font-size: 13px;
     }
+    .page-title-wrapper{
+        height: 171px;
+    }
+    .header_links_wrap{
+        display: block;
+    }
+    .page-login-title-wrapper{
+        height: 0;
+
+        .header-btns-panel{
+            display: none;
+        }
+    }
 }
 @media screen and (max-width: 768px){
     .page_wrap_height,
     .page_wrap{
         min-height: 20px!important;
+    }
+    .header-btns-panel{
+        display: flex;
+    }
+    .inner_title{
+        display: none;
     }
 }
 

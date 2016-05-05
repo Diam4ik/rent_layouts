@@ -1,255 +1,225 @@
 $(function () {
-    $('input[type="text"], input[type="email"], input[type="tel"], textarea').focus(function () {
-        if ($(this).val() == $(this).attr("title")) {
-            $(this).val("");
-        }
-    }).blur(function () {
-                if ($(this).val() == "") {
-                    $(this).val($(this).attr("title"));
-                }
-            });
+	$('input[type="text"], input[type="email"], input[type="tel"], textarea').focus(function () {
+		if ($(this).val() == $(this).attr("title")) {
+			$(this).val("");
+		}
+	}).blur(function () {
+		if ($(this).val() == "") {
+			$(this).val($(this).attr("title"));
+		}
+	});
 
-    // todo del for production
-    $("body").append("<img src=\"psd/1.jpg\" class=\"ov\">");
+	// todo del for production
+	//$("body").append("<img src=\"psd/1.jpg\" class=\"ov\">");
 
-    var $tabItem = $('.analysis-tab-item');
-    var $tabContent = $('.analysis-content-panel');
-    var selectedStyle = 'selected';
+	var $tabItem = $('.analysis-tab-item');
+	var $tabContent = $('.analysis-content-panel');
+	var selectedStyle = 'selected';
 
-    function tabsInit() {
-        var ind = 0;
-        $tabItem.each(function () {
-            if ($(this).hasClass(selectedStyle)) {
-                ind = $(this).index();
-            }
-        });
-        $tabContent.hide();
-        $tabContent.eq(ind).show();
-    }
+	function tabsInit() {
+		var ind = 0;
+		$tabItem.each(function () {
+			if ($(this).hasClass(selectedStyle)) {
+				ind = $(this).index();
+			}
+		});
+		$tabContent.hide();
+		$tabContent.eq(ind).show();
+	}
 
-    tabsInit();
+	tabsInit();
 
-    $tabItem.click(function () {
-        var _ = $(this);
-        var ind = _.index();
+	$tabItem.click(function () {
+		var _ = $(this);
+		var ind = _.index();
 
-        if (!_.hasClass(selectedStyle)) {
-            $tabItem.removeClass(selectedStyle);
-            _.addClass(selectedStyle);
-            $tabContent.hide();
-            $tabContent.eq(ind).show();
-        }
-    });
+		if (!_.hasClass(selectedStyle)) {
+			$tabItem.removeClass(selectedStyle);
+			_.addClass(selectedStyle);
+			$tabContent.hide();
+			$tabContent.eq(ind).show();
+		}
+	});
 
-    $('.toggle-menu-btn').click(function () {
-        $(this).toggleClass('active');
-        $('.nav').toggleClass('open');
-    });
+	$('.toggle-menu-btn').click(function () {
+		$(this).toggleClass('active');
+		$('.nav').toggleClass('open');
+	});
 
-    var clientWidth = document.documentElement.clientWidth;
-    var widthTablet = 767;
-    var isShowLoginPanel = true;
-    var isShowRegisterPanel = false;
+	var clientWidth = document.documentElement.clientWidth;
+	var clientHeight = document.documentElement.clientHeight;
+	var scrollTop = 0;
+	var widthTablet = 767;
+	var isShowLoginPanel = true;
+	var isShowRegisterPanel = false;
 
-    $('.btn_login').on('click', function (e) {
-        if (clientWidth > widthTablet) {
-            //типо десктоп
-            //выполняем валидацию формы и отправку (пока временно ничего не делаем)
-//            e.preventDefault();
-        } else {
-            if (!isShowLoginPanel) {
-                $('.inner_title').removeClass('active');
-                $(this).addClass('active');
-                $('.js-login-accordion').slideDown();
-                $('.js-registration-accordion').slideUp();
-                isShowLoginPanel = true;
-                isShowRegisterPanel = false;
-//                e.preventDefault();
-            } else {
-                //выполняем валидацию формы и отправку (пока временно ничего не делаем)
-//                e.preventDefault();
-            }
-        }
-    });
-    $('.btn_reg').on('click', function (e) {
-        if (clientWidth > widthTablet) {
-            //типо десктоп
-            //выполняем валидацию формы и отправку (пока временно ничего не делаем)
-//            e.preventDefault();
-        } else {
-            if (!isShowRegisterPanel) {
-                $('.inner_title').removeClass('active');
-                $(this).addClass('active');
-                $('.js-login-accordion').slideUp();
-                $('.js-registration-accordion').slideDown();
-                isShowLoginPanel = false;
-                isShowRegisterPanel = true;
-//                e.preventDefault();
-            } else {
-                //выполняем валидацию формы и отправку (пока временно ничего не делаем)
-//                e.preventDefault();
-            }
-        }
-    });
-    function toggleVisibleLoginAndRegistrationPanel() {
-        if (clientWidth <= widthTablet) {
-            if (isShowLoginPanel) {
-                $('.js-registration-accordion').hide();
-                $('.btn_login').addClass('active');
-            }
-            if (isShowRegisterPanel) {
-                $('.js-login-accordion').hide();
-                $('.btn_reg').addClass('active');
-            }
-        } else {
-            $('.js-registration-accordion').removeAttr('style');
-            $('.js-login-accordion').removeAttr('style');
-        }
-    }
+	$('.btn_login').on('click', function (e) {
+		if (clientWidth > widthTablet) {
+			//типо десктоп
+			//выполняем валидацию формы и отправку (пока временно ничего не делаем)
+			//e.preventDefault();
+		} else {
+			if (!isShowLoginPanel) {
+				$('.header-btn').removeClass('active');
+				$(this).addClass('active');
+				$('.js-login-accordion').slideDown(function () {
+					setLoginPageHeight();
+				});
+				$('.js-registration-accordion').slideUp();
+				isShowLoginPanel = true;
+				isShowRegisterPanel = false;
+				//e.preventDefault();
+			} else {
+				//выполняем валидацию формы и отправку (пока временно ничего не делаем)
+				//e.preventDefault();
+			}
+		}
+	});
+	$('.btn_reg').on('click', function (e) {
+		if (clientWidth > widthTablet) {
+			//типо десктоп
+			//выполняем валидацию формы и отправку (пока временно ничего не делаем)
+			//e.preventDefault();
+		} else {
+			if (!isShowRegisterPanel) {
+				$('.header-btn').removeClass('active');
+				$(this).addClass('active');
+				$('.js-login-accordion').slideUp();
+				$('.js-registration-accordion').slideDown(function () {
+					setLoginPageHeight();
+				});
+				isShowLoginPanel = false;
+				isShowRegisterPanel = true;
+				//e.preventDefault();
+			} else {
+				//выполняем валидацию формы и отправку (пока временно ничего не делаем)
+				//e.preventDefault();
+			}
+		}
+	});
 
-    toggleVisibleLoginAndRegistrationPanel();
+	function toggleVisibleLoginAndRegistrationPanel() {
+		if (clientWidth <= widthTablet) {
+			if (isShowLoginPanel) {
+				$('.js-registration-accordion').hide();
+				$('.btn_login').addClass('active');
+			}
+			if (isShowRegisterPanel) {
+				$('.js-login-accordion').hide();
+				$('.btn_reg').addClass('active');
+			}
+		} else {
+			$('.js-registration-accordion').css('display', 'block');
+			$('.js-login-accordion').css('display', 'block');
+		}
+	}
 
-    var clientHeight = document.documentElement.clientHeight;
-    var headerHeight =  $('.header').height();
-    var mobTitleHeight =  $('.mob_title').outerHeight();
-    var message =  $('.message_wrap').outerHeight(true);
-    var titleNoteHeight =  $('.header_title_note').outerHeight();
-//    var titleHeight =  $('.prof_title').outerHeight();
-    var headerTitleHeight =  $('.header_title').outerHeight();
-    console.log('clientHeight ' + clientHeight);
-    console.log('headerHeight ' + headerHeight);
-    console.log('mob_title ' + mobTitleHeight);
-    console.log('message ' + message);
-    console.log('header_title_note ' + titleNoteHeight);
-//    console.log('prof_title ' + titleHeight);
-    console.log('header_title ' + headerTitleHeight);
+	toggleVisibleLoginAndRegistrationPanel();
 
-    function setHeightMob() {
-//        var clientHeight = document.documentElement.clientHeight;
-//        var headerHeight =  $('.header').height();
-//        var mobTitleHeight =  $('.mob_title').outerHeight();
-//        var message =  $('.message_wrap').outerHeight();
-        var contentHeight = clientHeight - headerHeight - message - mobTitleHeight - 50 - 82 ;
-        $('.login_inner').css("min-height", contentHeight);
-    }
+	function setLoginPageHeight() {
+		var defaultBottomIndent = clientWidth > widthTablet ? 30 : 50;
+		var $loginInner = $('.login_inner, .page_wrap_height');
+		var $loginWrapItem = $('.login_wrap_item, .page_wrap_height');
+		if ($loginInner.length > 0) {
+			var availableHeight = clientHeight - $loginInner.offset().top - defaultBottomIndent;
+			var availableMinHeight = 0;
+			if ($loginWrapItem.length > 0) {
+				$loginWrapItem.css('height', 'auto');
+				$loginWrapItem.each(function () {
+					if ($(this).is(':visible')) {
+						var loginWrapItemHeight = $(this).outerHeight();
+						if (loginWrapItemHeight > availableMinHeight) {
+							availableMinHeight = loginWrapItemHeight;
+						}
+					}
+				});
+				if (availableHeight > availableMinHeight) {
+					$loginWrapItem.each(function () {
+						if ($(this).is(':visible')) {
+							$(this).css('height', availableHeight);
+						}
+					});
+				} else {
+					$loginWrapItem.each(function () {
+						if ($(this).is(':visible')) {
+							$(this).css('height', availableMinHeight);
+						}
+					});
+				}
+			} else {
+				$loginInner.css('height', availableHeight);
+			}
+		}
+	}
 
-    setHeightMob();
+	setLoginPageHeight();
 
-    function setHeightContent() {
-//        var clientHeight = document.documentElement.clientHeight;
-//        var headerHeight =  $('.header').height();
-//        var headerTitleHeight =  $('.header_title').outerHeight();
-//        var titleNoteHeight =  $('.header_title_note').outerHeight();
-//        var titleProfHeight =  $('.prof_title').outerHeight();
-//        var contentHeight = clientHeight - headerHeight - headerTitleHeight - titleHeight - titleNoteHeight - 50 ;
-        var contentHeight = clientHeight - headerHeight - headerTitleHeight - mobTitleHeight - titleNoteHeight - 55;
-        $('.page_wrap').css("min-height", contentHeight);
-        $('.profile_wrap').css("min-height", contentHeight);
-        $('.page_wrap_height').css("min-height", contentHeight);
-    }
+	$(window).on("resize", function () {
+		clientWidth = document.documentElement.clientWidth;
+		clientHeight = document.documentElement.clientHeight;
 
-    setHeightContent();
+		toggleVisibleLoginAndRegistrationPanel();
+		setLoginPageHeight();
+	}).on('scroll', function () {
+		scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    $(window).on("resize", function () {
-        clientWidth = document.documentElement.clientWidth;
-        clientHeight = document.documentElement.clientHeight;
-        headerHeight =  $('.header').height();
-        mobTitleHeight =  $('.mob_title').outerHeight();
-        message =  $('.message_wrap').outerHeight();
-        titleNoteHeight =  $('.header_title_note').outerHeight();
-//        titleHeight =  $('.prof_title').outerHeight();
-        headerTitleHeight =  $('.header_title').outerHeight();
+		if (clientWidth <= widthTablet) {
+			if (scrollTop > 0) {
+				$('.page-title-wrapper').addClass('sticked');
+			} else {
+				$('.page-title-wrapper').removeClass('sticked');
+			}
+			setLoginPageHeight();
+		}
+	});
 
-        toggleVisibleLoginAndRegistrationPanel();
-        setHeightContent();
-        setHeightMob();
-        setPanelHeight();
-    });
+	$('body').on('click', function (e) {
+		if (!$(e.target).closest('.h_profile_wrap').length) {
+			$('.profile_name').removeClass('active');
+			$('.profile_logout').removeClass('open');
+		}
+	});
 
+	$("#from").datepicker({
+		defaultDate: "+1w",
+		buttonImage: "img/calendar.png",
+		showOn: "both",
+		buttonImageOnly: true,
+		numberOfMonths: 1,
+		onClose: function (selectedDate) {
+			$("#to").datepicker("option", "minDate", selectedDate);
+		}
+	});
 
-    function setPanelHeight() {
-        var el = $('.login_wrap_item');
-        if (el.length) {
-            el.removeAttr('style');
-            if (clientWidth > widthTablet) {
-                var maxHeight = 0;
-                el.each(function () {
-                    var $height = $(this).height();
-                    if ($height > maxHeight) {
-                        maxHeight = $height;
-                    }
-                });
-                el.height(maxHeight);
-//                var clientHeight = document.documentElement.clientHeight;
-//                var headerHeight =  $('.header').height();
-//                var message =  $('.message_wrap').outerHeight();
-//                var titleHeight =  $('.prof_title').outerHeight();
-//                var titleNoteHeight =  $('.header_title_note').outerHeight();
-//                var contentHeight = clientHeight - headerHeight - titleHeight - titleNoteHeight - mobTitleHeight - message - 75 ;
-                var contentHeight = clientHeight - headerHeight - titleNoteHeight - mobTitleHeight - message - 55;
-                $('.login_wrap_item').css("min-height", contentHeight);
-            }
-        }
-    }
+	$("#to").datepicker({
+		defaultDate: "+1w",
+		showOn: "both",
+		buttonImageOnly: true,
+		buttonImage: "img/calendar.png",
+		numberOfMonths: 1,
+		onClose: function (selectedDate) {
+			$("#from").datepicker("option", "maxDate", selectedDate);
+		}
+	});
 
-    setPanelHeight();
+	$('.open_print').on("click", function () {
+		window.print();
+	});
 
-    $("#from").datepicker({
-        defaultDate: "+1w",
-        buttonImage: "img/calendar.png",
-        showOn: "both",
-        buttonImageOnly: true,
-        numberOfMonths: 1,
-        onClose: function (selectedDate) {
-            $("#to").datepicker("option", "minDate", selectedDate);
-        }
-    });
+	$('.profile_name').click(function () {
+		$(this).toggleClass('active');
+		$('.profile_logout').toggleClass('open');
+	});
 
-    $("#to").datepicker({
-        defaultDate: "+1w",
-        showOn: "both",
-        buttonImageOnly: true,
-        buttonImage: "img/calendar.png",
-        numberOfMonths: 1,
-        onClose: function (selectedDate) {
-            $("#from").datepicker("option", "maxDate", selectedDate);
-        }
-    });
-
-    $('.open_print').on( "click", function(){
-        window.print();
-    });
-
-
-    $('.profile_name').click(function () {
-        $(this).toggleClass('active');
-        $('.profile_logout').toggleClass('open');
-    });
-
-    $('body').on('click', function (e) {
-        if (!$(e.target).closest('.h_profile_wrap').length) {
-            $('.profile_name').removeClass('active');
-            $('.profile_logout').removeClass('open');
-        }
-    });
-
-        $(".open_popup").fancybox({
-        maxWidth	: 700,
-        width		: '90%',
-        padding : 0,
-        margin : 0,
-        helpers:  {
-            overlay : {
-                locked : false
-            }
-        }
-    });
-
-//    function setHeightInner() {
-//        var headerHeight =  $('.page_wrap').height();
-//        $('.page_wrap_height').css("min-height", headerHeight);
-//    }
-
-//    setHeightInner();
-
+	$(".open_popup").fancybox({
+		maxWidth: 700,
+		width: '90%',
+		padding: 0,
+		margin: 0,
+		helpers: {
+			overlay: {
+				locked: false
+			}
+		}
+	});
 });
