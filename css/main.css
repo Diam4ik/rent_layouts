@@ -2210,7 +2210,7 @@ td {
   position: fixed;
   top: 77px;
   right: -100%;
-  padding: 20px;
+  padding: 45% 20px 20px 20px;
   bottom: 0;
   background: rgba(0, 0, 0, 0.9);
   -webkit-box-sizing: border-box;
@@ -2220,12 +2220,14 @@ td {
   -moz-transition: all 0.4s ease-out 0s;
   -o-transition: all 0.4s ease-out 0s;
   -ms-transition: all 0.4s ease-out 0s;
-  transition: all 0.4s ease-out 0s; }
+  transition: all 0.4s ease-out 0s;
+  text-align: center; }
   .nav.open {
     right: 0; }
   .nav a {
-    line-height: 1.8;
-    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 47px;
+    font-size: 14px;
     color: #fff;
     text-decoration: none; }
 
@@ -2239,6 +2241,7 @@ td {
   background: #ef642d; }
 
 @media screen and (min-width: 380px) {
+  .nav a,
   .header-btn {
     font-size: 20px; }
 

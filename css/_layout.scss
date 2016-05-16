@@ -799,11 +799,12 @@ td{
     position: fixed;
     top: 77px;
     right: -100%;
-    padding: 20px;
+    padding: 45% 20px 20px 20px;
     bottom: 0;
     background: rgba(0,0,0,0.90);
     @include box-sizing;
     @include transition(all);
+    text-align: center;
 
     &.open{
 //        display: block;
@@ -811,8 +812,9 @@ td{
     }
 
     a{
-        line-height: 1.8;
-        font-size: 20px;
+        text-transform: uppercase;
+        line-height: 47px;
+        font-size: 14px;
         color: #fff;
         text-decoration: none;
     }
