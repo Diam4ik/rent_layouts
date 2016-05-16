@@ -1909,8 +1909,8 @@ body {
 .datepicker_wrap {
   position: absolute;
   top: 85px;
-  left: 36px;
-  right: 36px; }
+  left: 27px;
+  right: 27px; }
 
 .datepicker {
   float: left; }
@@ -2034,7 +2034,7 @@ body {
   background: #ff0000; }
 
 .pagination_wrap {
-  padding: 20px 0 10px 0;
+  padding: 5px 0 5px 0;
   font-size: 11px;
   color: #3c515f; }
   .pagination_wrap span {
@@ -2206,12 +2206,13 @@ td {
   border-radius: 50%; }
 
 .nav {
+  width: 100%;
   position: fixed;
   top: 77px;
-  right: -165px;
+  right: -100%;
   padding: 20px;
-  width: 160px;
-  background: #fff;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -2225,7 +2226,7 @@ td {
   .nav a {
     line-height: 1.8;
     font-size: 20px;
-    color: #3c515f;
+    color: #fff;
     text-decoration: none; }
 
 .logout_wrap {
@@ -2256,6 +2257,10 @@ td {
     float: right;
     text-align: right; } }
 @media screen and (min-width: 400px) {
+  .datepicker_wrap {
+    left: 36px;
+    right: 36px; }
+
   .message_wrap {
     line-height: 50px;
     font-size: 20px; }
