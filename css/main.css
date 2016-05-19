@@ -2239,6 +2239,8 @@ td {
 
 .h_admin {
   background: #ef642d; }
+  .h_admin .logo {
+    float: left; }
 
 @media screen and (min-width: 380px) {
   .nav a,
