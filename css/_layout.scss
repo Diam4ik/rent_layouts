@@ -515,7 +515,7 @@ body {
 }
 .date_table_row{
     display: table-row;
-    @include transition(background);
+//    @include transition(background);
 
     &:first-child{
         display: none;
@@ -834,5 +834,38 @@ td{
 
     .logo{
         float: left;
+    }
+}
+.page_inner_forms{
+
+    .page-login-title-wrapper.sticked + .login_wrap{
+        padding-top: 0;
+    }
+    .header-btns-panel {
+        position: absolute;
+    }
+    .mob_title {
+        padding: 59px 20px 60px 20px;
+    }
+    .page-title-wrapper.sticked {
+        position: relative;
+    }
+    .header {
+        position: absolute;
+    }
+    .page-title-wrapper.sticked + .login_wrap {
+        padding-top: 0;
+    }
+    .page-title-wrapper.sticked .header_title_note{
+        display: block;
+    }
+    .page-title-wrapper.sticked .header_title {
+        padding: 85px 20px 10px;
+    }
+    .page-title-wrapper.sticked{
+        height: 223px;
+    }
+    .page-title-wrapper.sticked + .page_wrap {
+        padding-top: 0;
     }
 }

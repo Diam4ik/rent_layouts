@@ -1958,12 +1958,7 @@ body {
   padding-bottom: 10px; }
 
 .date_table_row {
-  display: table-row;
-  -webkit-transition: background 0.4s ease-out 0s;
-  -moz-transition: background 0.4s ease-out 0s;
-  -o-transition: background 0.4s ease-out 0s;
-  -ms-transition: background 0.4s ease-out 0s;
-  transition: background 0.4s ease-out 0s; }
+  display: table-row; }
   .date_table_row:first-child {
     display: none; }
   .date_table_row:hover {
@@ -2242,6 +2237,27 @@ td {
   .h_admin .logo {
     float: left; }
 
+.page_inner_forms .page-login-title-wrapper.sticked + .login_wrap {
+  padding-top: 0; }
+.page_inner_forms .header-btns-panel {
+  position: absolute; }
+.page_inner_forms .mob_title {
+  padding: 59px 20px 60px 20px; }
+.page_inner_forms .page-title-wrapper.sticked {
+  position: relative; }
+.page_inner_forms .header {
+  position: absolute; }
+.page_inner_forms .page-title-wrapper.sticked + .login_wrap {
+  padding-top: 0; }
+.page_inner_forms .page-title-wrapper.sticked .header_title_note {
+  display: block; }
+.page_inner_forms .page-title-wrapper.sticked .header_title {
+  padding: 85px 20px 10px; }
+.page_inner_forms .page-title-wrapper.sticked {
+  height: 223px; }
+.page_inner_forms .page-title-wrapper.sticked + .page_wrap {
+  padding-top: 0; }
+
 @media screen and (min-width: 380px) {
   .nav a,
   .header-btn {
@@ -2473,6 +2489,9 @@ td {
   .balance_title {
     font-size: 21px; } }
 @media screen and (min-width: 768px) {
+  .page_inner_forms .header {
+    position: fixed; }
+
   .logout_wrap {
     display: block;
     text-transform: uppercase;
