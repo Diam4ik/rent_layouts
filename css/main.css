@@ -2200,12 +2200,18 @@ td {
 .check_cell .check_wrap label::before {
   border-radius: 50%; }
 
+.nav_inner {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0; }
+
 .nav {
   width: 100%;
   position: fixed;
   top: 77px;
   right: -100%;
-  padding: 45% 20px 20px 20px;
+  padding: 0 20px 0 20px;
   bottom: 0;
   background: rgba(0, 0, 0, 0.9);
   -webkit-box-sizing: border-box;

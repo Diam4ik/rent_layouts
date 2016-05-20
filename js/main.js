@@ -111,6 +111,8 @@ $(function () {
 		} else {
 			$('.js-registration-accordion').css('display', 'block');
 			$('.js-login-accordion').css('display', 'block');
+            $('.toggle-menu-btn').removeClass('active');
+            $('.nav').removeClass('open');
 		}
 	}
 
@@ -153,11 +155,11 @@ $(function () {
 	}
 
 	setLoginPageHeight();
-
+    var navCenter = $('.nav_inner').innerHeight();
 	$(window).on("resize", function () {
 		clientWidth = document.documentElement.clientWidth;
 		clientHeight = document.documentElement.clientHeight;
-
+        navCenter = $('.nav_inner').innerHeight();
 		toggleVisibleLoginAndRegistrationPanel();
 		setLoginPageHeight();
 	}).on('scroll', function () {
@@ -222,4 +224,7 @@ $(function () {
 			}
 		}
 	});
+
+    $('.nav_inner').css('margin-top', -(navCenter/2));
+
 });
