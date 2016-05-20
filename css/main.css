@@ -1651,7 +1651,10 @@ body {
     margin-top: 4px; }
   .toggle-menu-btn.active .first {
     margin-top: 12px;
-    transform: rotate(45deg); }
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg); }
   .toggle-menu-btn.active .second {
     height: 0;
     margin: 0;
@@ -1663,7 +1666,10 @@ body {
     transition: all 0s ease-out 0s; }
   .toggle-menu-btn.active .third {
     margin-top: -3px;
-    transform: rotate(-45deg); }
+    transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg); }
 
 .content {
   position: relative;

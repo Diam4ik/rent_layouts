@@ -242,6 +242,9 @@ body {
         .first {
             margin-top: 12px;
             transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
         }
         .second {
             height: 0;
@@ -252,6 +255,9 @@ body {
         .third {
             margin-top: -3px;
             transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
         }
     }
 }
