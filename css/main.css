@@ -2431,6 +2431,18 @@ td {
   .pagination_wrap {
     font-size: 20px; } }
 @media screen and (min-width: 600px) {
+  .ui-widget-header {
+    font-size: 18px; }
+
+  .ui-datepicker {
+    width: auto; }
+
+  .ui-datepicker td span, .ui-datepicker td a {
+    padding: .3em; }
+
+  .ui-datepicker-calendar td a {
+    font-size: 20px; }
+
   .header_links_wrap {
     line-height: 88px;
     font-size: 30px;
@@ -2475,6 +2487,9 @@ td {
   .mob_title {
     font-size: 50px; } }
 @media screen and (min-width: 700px) {
+  .ui-datepicker-calendar td a {
+    font-size: 26px; }
+
   .pagination_wrap {
     font-size: 24px; }
 
@@ -2501,6 +2516,15 @@ td {
   .balance_title {
     font-size: 21px; } }
 @media screen and (min-width: 768px) {
+  .ui-widget-header {
+    font-size: 14px; }
+
+  .ui-datepicker td span, .ui-datepicker td a {
+    padding: .3em; }
+
+  .ui-datepicker-calendar td a {
+    font-size: 14px; }
+
   .page_inner_forms .header {
     position: fixed; }
 
